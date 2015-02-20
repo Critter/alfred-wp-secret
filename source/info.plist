@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.413Critter.wp-salt</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>29E6A9F8-E7F6-4F08-B873-3603324A8D04</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8CB9E2DD-A4FC-4AA5-B229-88174066B821</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>09346D0E-34EC-4C80-9EC9-5B69CB2EEBC7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>7AECCB36-3591-4513-9433-CC0833D27A45</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>29E6A9F8-E7F6-4F08-B873-3603324A8D04</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>413Critter</string>
+	<key>description</key>
+	<string>Generate new set of security keys for wordpress</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Wordpress Security Keys</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>echo file_get_contents('https://api.wordpress.org/secret-key/1.1/salt/');</string>
+				<key>type</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>29E6A9F8-E7F6-4F08-B873-3603324A8D04</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>wpsalt</string>
+				<key>subtext</key>
+				<string>to be used in wp-config.php</string>
+				<key>text</key>
+				<string>Generate a new set of private keys</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>7AECCB36-3591-4513-9433-CC0833D27A45</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>A New WP Salt Seed has been copied to your clipboard</string>
+				<key>title</key>
+				<string>New Salt Success</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>8CB9E2DD-A4FC-4AA5-B229-88174066B821</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>09346D0E-34EC-4C80-9EC9-5B69CB2EEBC7</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>This will generate a new set of secret keys for your wordpress install. They will be copied to your clipboard.
+
+You can generate them yourself at:
+https://api.wordpress.org/secret-key/1.1/salt/
+
+If your site is ever compromised, you will want to generate a new set.</string>
+	<key>uidata</key>
+	<dict>
+		<key>09346D0E-34EC-4C80-9EC9-5B69CB2EEBC7</key>
+		<dict>
+			<key>ypos</key>
+			<real>180</real>
+		</dict>
+		<key>29E6A9F8-E7F6-4F08-B873-3603324A8D04</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>7AECCB36-3591-4513-9433-CC0833D27A45</key>
+		<dict>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+		<key>8CB9E2DD-A4FC-4AA5-B229-88174066B821</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://413cr.it/ter</string>
+</dict>
+</plist>
